@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    align-items: center;
+    background: linear-gradient(180deg, black, rgb(44, 44, 44) );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    padding: 0;
+    min-height: 100vh;
+    height: auto; 
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(110, 17, 17);
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 20px 50px;
+    position: fixed;
+    z-index: 1000;
+
+}
+
+.menu-links {
+    display: flex;
+    gap: 30px;
+    
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    color: #dc2c2c;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+#titulo {
+    font-size: 56px;
+    font-family: 'Cinzel Decorative', serif;
+    padding-top: 80px;
+}
+
+#desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    padding: 0px 20px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+.btn-landing {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    padding-top: 30px;
+}
+
+.btn-landing a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 60px;
+    border: 1px solid white;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+.btn-landing a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: -3px 4px 15px #dc2c2c;
+}
+
+.servicos {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 38px;
+}

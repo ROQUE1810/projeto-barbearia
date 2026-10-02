@@ -1,4 +1,5 @@
 services:
+
   postgres:
     image: postgres:17
     container_name: barbearia-postgres
@@ -11,6 +12,32 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d barbearia"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    container_name: barbearia-app
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/barbearia
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    ports:
+      - "8080:8080"
+
+  frontend:
+    build: ../frontend
+    container_name: barbearia-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - app
+
 volumes:
   postgres_data:
-  

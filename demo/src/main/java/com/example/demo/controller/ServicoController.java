@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/api/servicos")
@@ -22,5 +24,10 @@ public class ServicoController {
     @GetMapping
     public List<Servico> listarServicos() {
         return servicoRepository.findAll();
+    }
+
+    @PostMapping
+    public Servico cadastrarServico(@RequestBody Servico servico) {
+        return servicoRepository.save(servico);
     }
 }
