@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Horário</title>
+    <link rel="stylesheet" href="check.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>CONSULTE SEU HORÁRIO</h1>
+
+        <form>
+
+            <label for="nome">Seu Nome:</label>
+            <input 
+                type="text" 
+                id="nome" 
+                placeholder="Digite seu nome completo"
+            >
+
+            <label for="telefone">Seu Telefone:</label>
+            <input 
+                type="tel" 
+                id="telefone" 
+                placeholder="(XX) XXXXX-XXXX"
+            >
+
+            <label for="data">Data do Agendamento:</label>
+            <input 
+                type="date" 
+                id="data"
+            >
+
+            <button type="submit">Consultar Agendamento</button>
+
+        </form>
+
+        <div class="resultado">
+            <h2>Seu Agendamento</h2>
+
+            <p><strong>Cliente:</strong> Seu Nome</p>
+            <p><strong>Serviço:</strong> Corte de Cabelo</p>
+            <p><strong>Barbeiro:</strong> Profissional</p>
+            <p><strong>Data:</strong> 00/00/0000</p>
+            <p><strong>Horário:</strong> 00:00</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
