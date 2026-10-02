@@ -100,3 +100,81 @@ nav {
     padding: 30px;
     font-size: 38px;
 }
+
+.servicos {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.servicos h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.cards-servicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card-servico {
+    background: rgb(25, 25, 25);
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+    transition: 0.3s;
+}
+
+.card-servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+
+.card-servico h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.card-servico p {
+    font-size: 15px;
+    color: rgb(200, 200, 200);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-servico span {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-servico {
+    background: rgb(25, 25, 25);
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
+    transition: 0.3s;
+}
+
+.card-servico:hover {
+    transform: translateY(-5px);
+    background-color: transparent;
+    border-bottom: 5px solid #c04949;
+    box-shadow: -3px 4px 15px #dc2c2c;
+}
+
+.card-servico:hover h3 {
+    color: #dc2c2c;
+}
+
+.card-servico:hover p {
+    color: #fffcfc;
+}
+
+.card-servico:hover span {
+    color: #dc2c2c;
+}
