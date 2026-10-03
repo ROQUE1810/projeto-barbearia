@@ -1,11 +1,14 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    margin: 0;
     background: linear-gradient(180deg, black, rgb(44, 44, 44) );
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -14,20 +17,81 @@ body {
     padding: 20px;
 }
 
-.card {
+/* O container do login seguindo o padrão de card com borda branca */
+.login-container {
     display: flex;
-    border: 3px solid black;
-    border-color: white;
+    border: 3px solid white;
     padding: 40px;
     flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.5); /* Leve fundo escuro para destacar */
 }
 
-.formulario {
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Estrutura do formulário com o espaçamento que você definiu */
+#formLoginReal {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.btn-confirm {
+/* Estilização dos blocos de texto e inputs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
     padding: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    background-color: rgb(44, 44, 44);
+}
+
+/* O botão de confirmação com base na sua regra */
+button[type="submit"] {
+    padding: 12px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+/* Estilização do link de voltar */
+p a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+p a:hover {
+    color: white;
 }

@@ -12,43 +12,27 @@
 
         <h1>CONSULTE SEU HORÁRIO</h1>
 
-        <form>
-
-            <label for="nome">Seu Nome:</label>
-            <input 
-                type="text" 
-                id="nome" 
-                placeholder="Digite seu nome completo"
-            >
-
-            <label for="telefone">Seu Telefone:</label>
-            <input 
-                type="tel" 
-                id="telefone" 
-                placeholder="(XX) XXXXX-XXXX"
-            >
-
-            <label for="data">Data do Agendamento:</label>
-            <input 
-                type="date" 
-                id="data"
-            >
-
-            <button type="submit">Consultar Agendamento</button>
-
-        </form>
+        <!-- Mensagem amigável informando o e-mail logado -->
+        <p style="text-align: center; color: #666;">
+            Exibindo agendamentos para: <strong id="txtEmailLogado">...</strong>
+        </p>
 
         <div class="resultado">
             <h2>Seu Agendamento</h2>
 
-            <p><strong>Cliente:</strong> Seu Nome</p>
-            <p><strong>Serviço:</strong> Corte de Cabelo</p>
-            <p><strong>Barbeiro:</strong> Profissional</p>
-            <p><strong>Data:</strong> 00/00/0000</p>
-            <p><strong>Horário:</strong> 00:00</p>
+            <!-- Adicionamos IDs nos seus <p> para o JavaScript preencher dinamicamente -->
+            <p><strong>Cliente:</strong> <span id="resCliente">Carregando...</span></p>
+            <p><strong>Serviço:</strong> <span id="resServico">Carregando...</span></p>
+            <p><strong>Barbeiro:</strong> <span id="resBarbeiro">Carregando...</span></p>
+            <p><strong>Data e Hora:</strong> <span id="resDataHora">00/00/0000 às 00:00</span></p>
         </div>
 
+        <br>
+        <p style="text-align: center;"><a href="main.html">Voltar para a Página Inicial</a></p>
+
     </div>
+
+    <script src="check.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nobleza</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="card">
+        <h1>AGENDE SEU HORÁRIO</h1>
+        <!-- Removi o action do formulário para o JavaScript controlar o envio -->
+        <form id="formAgendamento" class="formulario">
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+            <label for="email">Seu E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+            <!-- NOVOS CAMPOS ADICIONADOS PARA BATER COM O SEU JAVA SPRING BOOT -->
+            <label for="telefone">Seu Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+            <label for="servico">Serviço desejado:</label>
+            <select id="servico" name="servico" required>
+                <option value="">Selecione um serviço</option>
+                <option value="Corte de Cabelo">Corte de Cabelo</option>
+                <option value="Barba Completa">Barba Completa</option>
+                <option value="Combo Cabelo e Barba">Combo Cabelo e Barba</option>
+            </select>
+
+            <label for="barbeiro">Escolha o Barbeiro:</label>
+            <select id="barbeiro" name="barbeiro" required>
+                <option value="">Selecione um profissional</option>
+                <option value="Seu Jorge">Seu Jorge</option>
+                <option value="Carlos">Carlos</option>
+            </select>
+
+            <label for="dataHora">Data e Horário:</label>
+            <!-- Usando type="datetime-local" para o navegador abrir o calendário e relógio automáticos -->
+            <input type="datetime-local" id="dataHora" name="dataHora" required>
+
+            <button type="submit" class="btn-confirm">Agendar Horário</button> <br>
+        </form>
+        <a href="main.html" class="inicio"><small>Voltar à página inicial</small></a>
+    </div>
+
+    <!-- CÓDIGO JAVASCRIPT QUE FAZ A PONTE COM O BACK-END JAVA -->
+    <script src="script.js"></script>
+</body>
+</html>
