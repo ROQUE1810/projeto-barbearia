@@ -1,33 +1,228 @@
-* {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;600&display=swap');
+
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
     align-items: center;
     background: linear-gradient(180deg, black, rgb(44, 44, 44) );
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-family: Montserrat, sans-serif;
     color: white;
-    padding: 20px;
+    padding: 0;
+    min-height: 100vh;
+    height: auto;
+    margin: 0;
 }
 
-.card {
+nav {
+    width: 100%;
     display: flex;
-    border: 3px solid black;
-    border-color: white;
-    padding: 40px;
-    flex-direction: column;
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(110, 17, 17);
     gap: 20px;
+    box-sizing: border-box;
+    padding: 20px 50px;
+    position: fixed;
+    z-index: 1000;
+
 }
 
+.menu-links {
+    display: flex;
+    gap: 30px;
+
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s;
+}
+
+.menu-links a:hover {
+    color: #dc2c2c;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+#titulo {
+    font-size: 56px;
+    font-family: 'Cinzel Decorative', serif;
+    padding-top: 80px;
+}
+
+#desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    padding: 0px 20px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+.btn-landing {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    padding-top: 30px;
+}
+
+.btn-landing a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 60px;
+    border: 1px solid white;
+    border-radius: 1px;
+    transition: 0.3s;
+}
+
+.btn-landing a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: -3px 4px 15px #dc2c2c;
+}
+
+.servicos {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 38px;
+}
+
+/* ==========================================================================
+   ADICIONADO: ESTILOS PARA A TELA DE AGENDAMENTO (login.css)
+   ========================================================================== */
+
+/* Card Container */
+.card {
+    background: rgba(18, 18, 18, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    padding: 40px 35px;
+    width: 100%;
+    max-width: 460px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.card h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 26px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Formulário e Inputs */
+.formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 6px;
+    margin-top: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.formulario label:first-of-type {
+    margin-top: 0;
+}
+
+.formulario input,
+.formulario select {
+    background-color: rgb(25, 25, 25);
+    border: 1px solid #ffffff;
+    border-radius: 1px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 12px 14px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.formulario input::placeholder {
+    color: #888888;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+    border-color: #dc2c2c;
+    box-shadow: 0 0 10px rgba(220, 44, 44, 0.5);
+    background-color: rgb(32, 32, 32);
+}
+
+.formulario select option {
+    background-color: rgb(20, 20, 20);
+    color: #ffffff;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* Botão Confirmar */
 .btn-confirm {
-    padding: 10px;
+    width: 100%;
+    background-color: rgb(110, 17, 17);
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 1px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-confirm:hover {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: -3px 4px 15px #dc2c2c;
+}
+
+/* Link de voltar à página inicial */
+.inicio {
+    margin-top: 20px;
+    color: #aaaaaa;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.inicio:hover {
+    color: #dc2c2c;
 }
