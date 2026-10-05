@@ -11,7 +11,9 @@
             document.getElementById('txtEmailLogado').innerText = emailUsuario;
 
             // 3. Dispara a busca na rota que criamos no Java filtrando pelo e-mail
-            fetch(`http://localhost:8080/api/agendamentos/cliente/${emailUsuario}`)
+            fetch('http://localhost:8080/api/agendamentos', {
+                headers: { 'Authorization': 'Bearer ' + token }
+            })
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Erro ao buscar dados do servidor.');
@@ -28,8 +30,8 @@
                         return;
                     }
 
-                    // Pega o agendamento mais recente (posição 0 da lista)
-                    const atual = agendamentos[0];
+
+                    const atual = agendamentos[agendamentos.length - 1]; // o último cadastrado
 
                     // 4. Preenche o seu HTML com os dados reais vindos do PostgreSQL
                     document.getElementById('resCliente').innerText = atual.clienteNome;
